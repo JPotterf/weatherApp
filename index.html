@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Another Weather App</title>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+
+<link href='https://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.5/css/weather-icons.min.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.5/css/weather-icons-wind.min.css'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <main>
+  <div class="top hide" id="top-bar">
+    <div class="location-data">
+      <input class="location-data__input" id="location-input" type="text" title="Search for a Location"></input>
+      <label for="location-data__input" class="location-data__name" id="location-name">City, Country</label>
+      <button type="button" class="location-data__search-btn" id="search-btn"><i class="fa fa-search"></i></button>
+    </div>
+    <div class="datetime-data">
+      <div class="datetime-data__date" id="curr-date">{date}</div>
+      <div class="datetime-data__time" id="curr-time">{time}</div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal">
+    <p>
+      This app needs JavaScript to run properly. </br>
+      Please, check your settings.
+    </p>
+  </div>
+
+  <div id="data" class="data hide">
+    <div class="main-data">
+      <div class="main-data__weather-icon"><i class="wi wi-owm-800" id="curr-weather-icon"></i></div>
+      <div class="main-data__temp">
+        <span id="curr-temp-value">{temperature}</span><span class="main-data__temp-units" id="temp-units">°C</span>
+      </div>
+      <div class="main-data__weather-descr" id="curr-weather-descrip">{description}</div>
+    </div>
+
+    <div class="secondary-data">
+      <div class="secondary-data__pressure"><i class="wi wi-barometer"></i> <span id="curr-pressure">{pressure}</span></span>
+      </div>
+      <div class="secondary-data__humidity"><i class="wi wi-humidity"></i> <span id="curr-humidity">{humidity}</span></div>
+      <div class="secondary-data__wind"><i class="wi wi-wind-direction wi-from-sw" id="curr-wind-icon"></i> <span id="curr-wind-data">{wind}</span></div>
+    </div>
+  </div>
+</main>
+
+<div class="switch-btn">
+  <span class="units-label">°C</span>
+  <input type="checkbox" class="cmd-toggle" id="switch-units">
+  <label for="switch-units" class="switch-btn-label" title="fahrenheit/celsius"></label>
+  <span class="units-label">°F</span>
+</div>
+
+<footer>
+  <div class="credit">Data from <a href="http://www.openweathermap.org" target="_blank">OpenWeatherMap</a>, Developed by <a href="http://jacobpotterf.com" target="_blank">Jacob Potterf</a></div>
+</footer>
+  
+    <script src="js/index.js"></script>
+
+</body>
+</html>
